@@ -3,7 +3,6 @@ import Capacitor
 import UIKit
 import CallKit
 import PushKit
-import TwilioVideo
 
 /**
  *  CallKit Voip Plugin provides native PushKit functionality with apple CallKit to ionic capacitor
