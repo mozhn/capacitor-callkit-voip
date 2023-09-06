@@ -1,8 +1,8 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { CallkitVoipPlugin } from './definitions';
+import type { CallKitVoipPlugin } from './definitions';
 
-export class CallkitVoipWeb extends WebPlugin implements CallkitVoipPlugin {
+export class CallKitVoipWeb extends WebPlugin implements CallKitVoipPlugin {
   async register(): Promise<void> {
     return;
   }
