@@ -1,14 +1,14 @@
 import Foundation
 import Capacitor
 import UIKit
-import CallKit
+import Callkit
 import PushKit
 
 /**
- *  CallKit Voip Plugin provides native PushKit functionality with apple CallKit to ionic capacitor
+ *  Callkit Voip Plugin provides native PushKit functionality with apple Callkit to ionic capacitor
  */
-@objc(CallKitVoipPlugin)
-public class CallKitVoipPlugin: CAPPlugin {
+@objc(CallkitVoipPlugin)
+public class CallkitVoipPlugin: CAPPlugin {
 
     private var provider: CXProvider?
     private let voipRegistry            = PKPushRegistry(queue: nil)
@@ -72,9 +72,9 @@ public class CallKitVoipPlugin: CAPPlugin {
 }
 
 
-// MARK: CallKit events handler
+// MARK: Callkit events handler
 
-extension CallKitVoipPlugin: CXProviderDelegate {
+extension CallkitVoipPlugin: CXProviderDelegate {
 
     public func providerDidReset(_ provider: CXProvider) {
         print("provider did reset")
@@ -98,7 +98,7 @@ extension CallKitVoipPlugin: CXProviderDelegate {
 }
 
 // MARK: PushKit events handler
-extension CallKitVoipPlugin: PKPushRegistryDelegate {
+extension CallkitVoipPlugin: PKPushRegistryDelegate {
 
     public func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
         let parts = pushCredentials.token.map { String(format: "%02.2hhx", $0) }
@@ -121,7 +121,7 @@ extension CallKitVoipPlugin: PKPushRegistryDelegate {
 }
 
 
-extension CallKitVoipPlugin {
+extension CallkitVoipPlugin {
     struct CallConfig {
         let connectionId: String
         let username    : String
